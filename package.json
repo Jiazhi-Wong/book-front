@@ -1,0 +1,29 @@
+{
+  "name": "blog-server",
+  "version": "1.0.0",
+  "description": "This is my blog.",
+  "author": "huangjiazhi",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon index.js --ignore ./node_modules/",
+    "start": "cross-env NODE_ENV=production node index.js"
+  },
+  "dependencies": {
+    "@koa/cors": "^2.2.1",
+    "bootstrap": "^3.3.7",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-swig": "^2.2.1",
+    "lodash": "^4.17.5",
+    "log4js": "^2.5.3",
+    "request": "^2.88.0",
+    "systemjs": "^2.1.1",
+    "systemjs-transform-babel": "^0.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.1",
+    "nodemon": "^1.11.0"
+  }
+}

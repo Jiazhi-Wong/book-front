@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="country-create">
+
+    <h1>更新图书：{{book.book_name}}</h1>
+
+
+    <div class="country-form">
+        <div class="form-group field-country-code">
+            <label class="control-label" for="book-name">书名</label>
+            <input type="text" id="book-name" class="form-control" value="{{book.book_name}}">
+        </div>
+        <div class="form-group field-country-name">
+            <label class="control-label" for="book-author">作者</label>
+            <input type="text" id="book-author" class="form-control" value="{{book.book_author}}">
+        </div>
+        <div class="form-group field-country-population">
+            <label class="control-label" for="book-desc">描述</label>
+            <input type="text" id="book-desc" class="form-control" value="{{book.book_desc}}">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" id="save-btn" data-url="/api/books/{{book.book_id}}" data-method="put">Save</button>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="/systemjs/dist/system.min.js"></script>
+<script src="/systemjs/dist/extras/transform.min.js"></script>
+<script src="/systemjs-transform-babel/dist/babel-transform.js"></script>
+<script>
+  System.import('/js/update.js').then((res) => {
+    console.log(res);
+  });
+</script>
+{% endblock %}

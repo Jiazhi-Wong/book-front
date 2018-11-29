@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="country-view">
+
+    <h1>{{book.book_name}}</h1>
+
+    <p>
+        <a class="btn btn-primary" href="/books/update/{{book.book_id}}">Update</a>
+        <a class="btn btn-danger del-btn" href="javascript: void(0);" data-url="/api/books/{{book.book_id}}" data-method="delete" data-confirm="是否确认删除?">Delete</a>
+    </p>
+
+    <table id="w0" class="table table-striped table-bordered detail-view">
+        <tbody>
+        <tr>
+            <th>ID</th>
+            <td>{{book.book_id}}</td>
+        </tr>
+        <tr>
+            <th>书名</th>
+            <td>{{book.book_name}}</td>
+        </tr>
+        <tr>
+            <th>作者</th>
+            <td>{{book.book_author}}</td>
+        </tr>
+        <tr>
+            <th>描述</th>
+            <td>{{book.book_desc}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="/systemjs/dist/system.min.js"></script>
+<script src="/systemjs/dist/extras/transform.min.js"></script>
+<script src="/systemjs-transform-babel/dist/babel-transform.js"></script>
+<script>
+  System.import('/js/detail.js').then((res) => {
+    console.log(res);
+  });
+</script>
+{% endblock %}

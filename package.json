@@ -1,7 +1,7 @@
 {
   "name": "blog-server",
   "version": "1.0.0",
-  "description": "This is my blog.",
+  "description": "This is a book system.",
   "author": "huangjiazhi",
   "private": true,
   "scripts": {

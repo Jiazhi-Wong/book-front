@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "This is a book system.",
   "author": "huangjiazhi",
-  "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon index.js --ignore ./node_modules/",
     "start": "cross-env NODE_ENV=production node index.js"
